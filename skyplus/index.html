@@ -32,8 +32,55 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.css">
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    
+     <script>
+// Disable right-click
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// Disable text selection
+document.addEventListener("selectstart", e => e.preventDefault());
+
+// Disable copy, cut, paste
+document.addEventListener("copy", e => e.preventDefault());
+document.addEventListener("cut", e => e.preventDefault());
+document.addEventListener("paste", e => e.preventDefault());
+
+// Disable drag & drop (especially for images)
+document.addEventListener("dragstart", e => e.preventDefault());
+
+// Disable specific key combinations
+document.addEventListener("keydown", e => {
+    // F12
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+    // Ctrl+Shift+I / Ctrl+Shift+J (DevTools)
+    if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) {
+        e.preventDefault();
+    }
+    // Ctrl+U (View Source)
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+    }
+    // Ctrl+S (Save Page)
+    if (e.ctrlKey && e.key.toLowerCase() === "s") {
+        e.preventDefault();
+    }
+    // Ctrl+C (Copy)
+    if (e.ctrlKey && e.key.toLowerCase() === "c") {
+        e.preventDefault();
+    }
+    // Ctrl+X (Cut)
+    if (e.ctrlKey && e.key.toLowerCase() === "x") {
+        e.preventDefault();
+    }
+    // Ctrl+A (Select All)
+    if (e.ctrlKey && e.key.toLowerCase() === "a") {
+        e.preventDefault();
+    }
+});
+</script>
 
 </head>
 
@@ -516,9 +563,9 @@ meeting our clients’ unique needs.</p>
                     <div class="col-lg-5">
                         <div class="acontact__form wow fadeInUp" data-wow-delay=".8s">
                             <h3 class="acontact__form--title">Free Estimate</h3>
-                            <form action="#">
-                                <input type="text" placeholder="Your Name">
-                                <input type="text" placeholder="Phone Number">
+                            <form action="" id="submit-form">
+                                <input type="text" placeholder="Your Name" required >
+                                <input type="text" placeholder="Phone Number" required >
                                 <div class="select__field--arrow">
                                     <select>
                                         <option value="">Choose Service</option>
@@ -532,6 +579,26 @@ meeting our clients’ unique needs.</p>
                                 <textarea placeholder="Write Message"></textarea>
                                 <button type="submit">Free Estimate</button>
                             </form>
+                            <script>
+            $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbx4bC562V4jYrzrbWVB1ob7kwKy2nBwvGCYHFqtdTp_k2B32B4PFBlhZIre8N4DrUlE/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+            alert("Our sales team will contact you shortly. Thank you!")
+            window.location.reload()
+            //window.location.href="https://google.com"
+            },
+            error:function (err){
+            alert("Something Error")
+            
+            }
+            })
+            })
+            </script>
+
                         </div>
                     </div>
                 </div>
@@ -965,7 +1032,7 @@ service they deserve</p>
                 <div class="row align-items-center">
                     <div class="col-md-7">
                         <div class="copyright__text">
-                            <span>Copyright © 2026<a href="">SKY PLUS</a>. All Rights Reserved.</span>
+                            <span>Copyright © 2026<a href=""> SKY PLUS</a>. All Rights Reserved.</span>
                         </div>
                     </div>
                     <div class="col-md-5">
