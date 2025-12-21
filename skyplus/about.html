@@ -31,6 +31,55 @@
     <link rel="stylesheet" href="assets/css/backToTop.css">
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/main.css">
+
+    
+    <script>
+// Disable right-click
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// Disable text selection
+document.addEventListener("selectstart", e => e.preventDefault());
+
+// Disable copy, cut, paste
+document.addEventListener("copy", e => e.preventDefault());
+document.addEventListener("cut", e => e.preventDefault());
+document.addEventListener("paste", e => e.preventDefault());
+
+// Disable drag & drop (especially for images)
+document.addEventListener("dragstart", e => e.preventDefault());
+
+// Disable specific key combinations
+document.addEventListener("keydown", e => {
+    // F12
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+    // Ctrl+Shift+I / Ctrl+Shift+J (DevTools)
+    if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) {
+        e.preventDefault();
+    }
+    // Ctrl+U (View Source)
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+    }
+    // Ctrl+S (Save Page)
+    if (e.ctrlKey && e.key.toLowerCase() === "s") {
+        e.preventDefault();
+    }
+    // Ctrl+C (Copy)
+    if (e.ctrlKey && e.key.toLowerCase() === "c") {
+        e.preventDefault();
+    }
+    // Ctrl+X (Cut)
+    if (e.ctrlKey && e.key.toLowerCase() === "x") {
+        e.preventDefault();
+    }
+    // Ctrl+A (Select All)
+    if (e.ctrlKey && e.key.toLowerCase() === "a") {
+        e.preventDefault();
+    }
+});
+</script>
 </head>
 
 <body>
@@ -106,7 +155,6 @@
                                             <li><a href="">Electrical Services</a></li>
                                              <li><a href="">Plumbing Services</a></li>
                                              <li><a href="">Painting & Decorating</a></li>
-                                             <li><a href="">Gypsum Work</a></li>
                                         </ul>
                                     </li>
                                    
@@ -233,7 +281,9 @@ proven effective for so many years in consistently
 meeting our clients’ unique needs </p>
                             <div class="aabout-qoute mb-50 wow fadeInUp" data-wow-delay="1.3s">
                                 <i class="fas fa-quote-right float-bob-x"></i>
-                                <h4 class="z-index">Don’t feel heat when there is best air <br>conditioning seat </h4>
+                                <h4 class="z-index">We have well-trained and well-motivated <br> employees
+to provide our clients with the <br>Highest Quality of
+service they deserve </h4>
                             </div>
                             <div class="aabout--profile__wrapper wow fadeInUp" data-wow-delay="1.6s">
                                 <div class="aabout--btn">
@@ -341,151 +391,7 @@ meeting our clients’ unique needs </p>
         <!-- cta area end here -->
 
         
-
-        <!-- fact area start here -->
-        <section class="fact-area-3 about-fact-area-3 z-index">
-            <div class="custom-container">
-                <div class="theme-bg-blue about-theme-bg-blue pt-90 pb-65 z-index">
-                    <div class="row">
-                        <div class="col-xl-3 col-sm-6">
-                            <div class="afact__3 mb-30 wow fadeInUp" data-wow-delay=".3s">
-                                <div class="afact__3--icon">
-                                    <i class="flaticon-technician"></i>
-                                </div>
-                                <div class="afact__3--text">
-                                    <h2>280+</h2>
-                                    <span>Expert Technician</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-sm-6">
-                            <div class="afact__3 mb-30 wow fadeInUp" data-wow-delay=".6s">
-                                <div class="afact__3--icon">
-                                    <i class="flaticon-business-and-trade"></i>
-                                </div>
-                                <div class="afact__3--text">
-                                    <h2>120+</h2>
-                                    <span>Total Branches</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-sm-6">
-                            <div class="afact__3 mb-30 wow fadeInUp" data-wow-delay=".9s">
-                                <div class="afact__3--icon">
-                                    <i class="flaticon-settings"></i>
-                                </div>
-                                <div class="afact__3--text">
-                                    <h2>380+</h2>
-                                    <span>Project Complete</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-sm-6">
-                            <div class="afact__3 mb-30 wow fadeInUp" data-wow-delay="1.2s">
-                                <div class="afact__3--icon">
-                                    <i class="flaticon-quality"></i>
-                                </div>
-                                <div class="afact__3--text">
-                                    <h2>350+</h2>
-                                    <span>Happy Customer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- fact area end here -->
-
-        
-        <!-- blog area start here -->
-        <section class="blog-area pt-115 pb-60">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-title-wrapper text-center mb-70 wow fadeInUp" data-wow-delay=".3s">
-                            <h6 class="subtitle mb-20"><img src="assets/img/icon/subtitle-icon.png" class="img-fluid" alt="img"> Recent Ariticle</h6>
-                            <h2 class="section-title">Every single update story<br>from our journal</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="ablog ablog-2 ablog-3 mb-30 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="ablog__img ablog__img3">
-                                <img src="assets/img/blog/blog-img-7.jpg" class="img-fluid" alt="img">
-                                <div class="blog__date blog__date2 blog__date3">
-                                    <h3 class="text-white">20</h3>
-                                    <span class="text-white">Dec</span>
-                                </div>
-                            </div>
-                            <div class="ablog__text ablog__text2 ablog__text3 text-center">
-                                <div class="ablog__meta ablog__meta3">
-                                    <ul>
-                                        <li><a href="#"><i class="far fa-bookmark"></i> Heating Services</a></li>
-                                        <li><a href="#"><i class="far fa-comments"></i> 0 Comment</a></li>
-                                    </ul>
-                                </div>
-                                <h4 class="ablog__text--title ablog__text--title2 ablog__text--title3"><a href="blog-details.html">Rhoncus ultrices ornare nest</a></h4>
-                                <p>Lorem ipsum dolor sit amets consec of tetur adipisicing elit sed do eiusmod tempor </p>
-                                <div class="ablog__text3--btn about--ablog__text3--btn">
-                                    <a href="blog-details.html" class="theme-btn grey-btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="ablog ablog-2 ablog-3 mb-30 wow fadeInUp" data-wow-delay=".6s">
-                            <div class="ablog__img ablog__img3">
-                                <img src="assets/img/blog/blog-img-8.jpg" class="img-fluid" alt="img">
-                                <div class="blog__date blog__date2 blog__date3">
-                                    <h3 class="text-white">22</h3>
-                                    <span class="text-white">Dec</span>
-                                </div>
-                            </div>
-                            <div class="ablog__text ablog__text2 ablog__text3 text-center">
-                                <div class="ablog__meta ablog__meta3">
-                                    <ul>
-                                        <li><a href="#"><i class="far fa-bookmark"></i> Heating Services</a></li>
-                                        <li><a href="#"><i class="far fa-comments"></i> 0 Comment</a></li>
-                                    </ul>
-                                </div>
-                                <h4 class="ablog__text--title ablog__text--title2 ablog__text--title3"><a href="blog-details.html">Facilisis sed putate dictumst</a></h4>
-                                <p>Laboris nisi ut aliquip exe ea commodo the coniseqs duis aute irure dolor  </p>
-                                <div class="ablog__text3--btn about--ablog__text3--btn">
-                                    <a href="blog-details.html" class="theme-btn grey-btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="ablog ablog-2 ablog-3 mb-30 wow fadeInUp" data-wow-delay=".9s">
-                            <div class="ablog__img ablog__img3">
-                                <img src="assets/img/blog/blog-img-9.jpg" class="img-fluid" alt="img">
-                                <div class="blog__date blog__date2 blog__date3">
-                                    <h3 class="text-white">24</h3>
-                                    <span class="text-white">Dec</span>
-                                </div>
-                            </div>
-                            <div class="ablog__text ablog__text2 ablog__text3 text-center">
-                                <div class="ablog__meta ablog__meta3">
-                                    <ul>
-                                        <li><a href="#"><i class="far fa-bookmark"></i> Heating Services</a></li>
-                                        <li><a href="#"><i class="far fa-comments"></i> 0 Comment</a></li>
-                                    </ul>
-                                </div>
-                                <h4 class="ablog__text--title ablog__text--title2 ablog__text--title3"><a href="blog-details.html"> Habitat port rhoncu comodo </a></h4>
-                                <p>Suscipit reduis arcuest iaculis class nullam sociis rutrum aliquam ander vulputa hendrerit </p>
-                                <div class="ablog__text3--btn about--ablog__text3--btn">
-                                    <a href="blog-details.html" class="theme-btn grey-btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- blog area end here -->
+<br><br>
 
         <!-- newsletter area start here -->
         <section class="newsletter-area z-index">
